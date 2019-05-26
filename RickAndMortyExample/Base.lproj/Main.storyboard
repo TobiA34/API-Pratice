@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="NYC-F8-f0N">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Characters View Controller-->
+        <scene sceneID="vCL-ir-A0b">
+            <objects>
+                <viewController id="NYC-F8-f0N" customClass="CharactersViewController" customModule="RickAndMortyExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="pbu-3N-6c4">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="fdw-79-Kzd">
+                                <rect key="frame" x="0.0" y="229" width="414" height="633"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="NYC-F8-f0N" id="Y2H-eB-SET"/>
+                                    <outlet property="delegate" destination="NYC-F8-f0N" id="hRW-cV-TZV"/>
+                                </connections>
+                            </tableView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rick_and_morty_logo" translatesAutoresizingMaskIntoConstraints="NO" id="IZq-yC-yTF">
+                                <rect key="frame" x="10" y="57" width="394" height="119"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3rF-d4-X2p">
+                                <rect key="frame" x="184" y="191" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="fdw-79-Kzd" firstAttribute="top" secondItem="IZq-yC-yTF" secondAttribute="bottom" constant="53" id="32c-T7-UZu"/>
+                            <constraint firstItem="g6B-pr-yNw" firstAttribute="bottom" secondItem="fdw-79-Kzd" secondAttribute="bottom" id="CWe-bh-7gi"/>
+                            <constraint firstItem="g6B-pr-yNw" firstAttribute="trailing" secondItem="IZq-yC-yTF" secondAttribute="trailing" constant="10" id="DdQ-94-U91"/>
+                            <constraint firstItem="g6B-pr-yNw" firstAttribute="trailing" secondItem="fdw-79-Kzd" secondAttribute="trailing" id="FET-hy-YAP"/>
+                            <constraint firstItem="IZq-yC-yTF" firstAttribute="leading" secondItem="g6B-pr-yNw" secondAttribute="leading" constant="10" id="LpC-o3-bfl"/>
+                            <constraint firstItem="fdw-79-Kzd" firstAttribute="leading" secondItem="g6B-pr-yNw" secondAttribute="leading" id="MYk-WJ-yDm"/>
+                            <constraint firstItem="fdw-79-Kzd" firstAttribute="top" secondItem="g6B-pr-yNw" secondAttribute="top" constant="185" id="Qbx-h9-ZGZ"/>
+                            <constraint firstItem="IZq-yC-yTF" firstAttribute="top" secondItem="g6B-pr-yNw" secondAttribute="top" constant="13" id="Wl1-8a-x02"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="g6B-pr-yNw"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="fdw-79-Kzd" id="1mJ-w6-zTS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YTj-sX-Znu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-768.11594202898561" y="24.776785714285712"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="rick_and_morty_logo" width="700" height="200"/>
+    </resources>
+</document>
