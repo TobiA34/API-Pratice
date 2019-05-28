@@ -18,5 +18,6 @@ target 'RickAndMortyExample' do
   end
 
    pod 'Kingfisher'
+   pod 'Alamofire'
 
 end

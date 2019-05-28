@@ -26,25 +26,41 @@
                                     <outlet property="delegate" destination="NYC-F8-f0N" id="hRW-cV-TZV"/>
                                 </connections>
                             </tableView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rick_and_morty_logo" translatesAutoresizingMaskIntoConstraints="NO" id="IZq-yC-yTF">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo1" highlightedImage="rick_and_morty_logo" translatesAutoresizingMaskIntoConstraints="NO" id="IZq-yC-yTF">
                                 <rect key="frame" x="10" y="57" width="394" height="119"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3rF-d4-X2p">
-                                <rect key="frame" x="184" y="191" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3rF-d4-X2p">
+                                <rect key="frame" x="95" y="163" width="64" height="48"/>
+                                <state key="normal" image="play-button (1)"/>
+                                <connections>
+                                    <action selector="playBtnDidTouch:" destination="NYC-F8-f0N" eventType="touchUpInside" id="hpE-Xs-MBJ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zVO-4E-HJI">
+                                <rect key="frame" x="277" y="168" width="32" height="48"/>
+                                <state key="normal" image="stop"/>
+                                <connections>
+                                    <action selector="stopBtnDidTouch:" destination="NYC-F8-f0N" eventType="touchUpInside" id="HiW-hq-MeC"/>
+                                </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="fdw-79-Kzd" firstAttribute="top" secondItem="3rF-d4-X2p" secondAttribute="bottom" constant="18" id="23d-Ij-cEC"/>
                             <constraint firstItem="fdw-79-Kzd" firstAttribute="top" secondItem="IZq-yC-yTF" secondAttribute="bottom" constant="53" id="32c-T7-UZu"/>
                             <constraint firstItem="g6B-pr-yNw" firstAttribute="bottom" secondItem="fdw-79-Kzd" secondAttribute="bottom" id="CWe-bh-7gi"/>
                             <constraint firstItem="g6B-pr-yNw" firstAttribute="trailing" secondItem="IZq-yC-yTF" secondAttribute="trailing" constant="10" id="DdQ-94-U91"/>
                             <constraint firstItem="g6B-pr-yNw" firstAttribute="trailing" secondItem="fdw-79-Kzd" secondAttribute="trailing" id="FET-hy-YAP"/>
                             <constraint firstItem="IZq-yC-yTF" firstAttribute="leading" secondItem="g6B-pr-yNw" secondAttribute="leading" constant="10" id="LpC-o3-bfl"/>
                             <constraint firstItem="fdw-79-Kzd" firstAttribute="leading" secondItem="g6B-pr-yNw" secondAttribute="leading" id="MYk-WJ-yDm"/>
+                            <constraint firstItem="fdw-79-Kzd" firstAttribute="top" secondItem="zVO-4E-HJI" secondAttribute="bottom" constant="13" id="OfT-x3-Law"/>
                             <constraint firstItem="fdw-79-Kzd" firstAttribute="top" secondItem="g6B-pr-yNw" secondAttribute="top" constant="185" id="Qbx-h9-ZGZ"/>
                             <constraint firstItem="IZq-yC-yTF" firstAttribute="top" secondItem="g6B-pr-yNw" secondAttribute="top" constant="13" id="Wl1-8a-x02"/>
+                            <constraint firstItem="3rF-d4-X2p" firstAttribute="leading" secondItem="g6B-pr-yNw" secondAttribute="leading" constant="95" id="Z24-HX-Ytd"/>
+                            <constraint firstItem="g6B-pr-yNw" firstAttribute="trailing" secondItem="zVO-4E-HJI" secondAttribute="trailing" constant="105" id="ZS5-9c-LkI"/>
+                            <constraint firstItem="3rF-d4-X2p" firstAttribute="top" secondItem="g6B-pr-yNw" secondAttribute="top" constant="119" id="exB-en-rDI"/>
+                            <constraint firstItem="zVO-4E-HJI" firstAttribute="top" secondItem="g6B-pr-yNw" secondAttribute="top" constant="124" id="nfX-Ts-bZP"/>
+                            <constraint firstItem="zVO-4E-HJI" firstAttribute="leading" secondItem="3rF-d4-X2p" secondAttribute="trailing" constant="118" id="rbE-dg-uuZ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="g6B-pr-yNw"/>
                     </view>
@@ -58,6 +74,9 @@
         </scene>
     </scenes>
     <resources>
+        <image name="logo1" width="700" height="200"/>
+        <image name="play-button (1)" width="64" height="64"/>
         <image name="rick_and_morty_logo" width="700" height="200"/>
+        <image name="stop" width="32" height="32"/>
     </resources>
 </document>

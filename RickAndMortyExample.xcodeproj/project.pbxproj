@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		B14592A5D2000719CFF05937 /* Pods_RickAndMortyExampleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0C8C654ADD12B63910B0598 /* Pods_RickAndMortyExampleTests.framework */; };
+		BD49EC2D229B164F0086249A /* AudioManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD49EC2C229B164F0086249A /* AudioManager.swift */; };
+		BD49EC30229B177D0086249A /* getSchwifty.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = BD49EC2F229B177C0086249A /* getSchwifty.mp3 */; };
 		BD4A7102229557FE00DC0541 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4A7101229557FE00DC0541 /* AppDelegate.swift */; };
 		BD4A7104229557FE00DC0541 /* CharactersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4A7103229557FE00DC0541 /* CharactersViewController.swift */; };
 		BD4A7107229557FE00DC0541 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD4A7105229557FE00DC0541 /* Main.storyboard */; };
@@ -51,6 +53,8 @@
 		804F2060546A04F2F5DC7F86 /* Pods_RickAndMortyExampleUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RickAndMortyExampleUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		88691C339A1DDBB0B7FDA4F4 /* Pods-RickAndMortyExampleUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RickAndMortyExampleUITests.release.xcconfig"; path = "Target Support Files/Pods-RickAndMortyExampleUITests/Pods-RickAndMortyExampleUITests.release.xcconfig"; sourceTree = "<group>"; };
 		A9C11077D3EBD4984A6C6854 /* Pods-RickAndMortyExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RickAndMortyExample.release.xcconfig"; path = "Target Support Files/Pods-RickAndMortyExample/Pods-RickAndMortyExample.release.xcconfig"; sourceTree = "<group>"; };
+		BD49EC2C229B164F0086249A /* AudioManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioManager.swift; sourceTree = "<group>"; };
+		BD49EC2F229B177C0086249A /* getSchwifty.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = getSchwifty.mp3; sourceTree = "<group>"; };
 		BD4A70FE229557FE00DC0541 /* RickAndMortyExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RickAndMortyExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD4A7101229557FE00DC0541 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BD4A7103229557FE00DC0541 /* CharactersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersViewController.swift; sourceTree = "<group>"; };
@@ -128,6 +132,23 @@
 				88691C339A1DDBB0B7FDA4F4 /* Pods-RickAndMortyExampleUITests.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		BD49EC2B229B16310086249A /* AudioManager */ = {
+			isa = PBXGroup;
+			children = (
+				BD49EC2C229B164F0086249A /* AudioManager.swift */,
+				BD49EC2E229B16C10086249A /* Audio */,
+			);
+			path = AudioManager;
+			sourceTree = "<group>";
+		};
+		BD49EC2E229B16C10086249A /* Audio */ = {
+			isa = PBXGroup;
+			children = (
+				BD49EC2F229B177C0086249A /* getSchwifty.mp3 */,
+			);
+			path = Audio;
 			sourceTree = "<group>";
 		};
 		BD4A70F5229557FE00DC0541 = {
@@ -240,6 +261,7 @@
 		BD8419EC22998FE000E2C2C8 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				BD49EC2B229B16310086249A /* AudioManager */,
 				BD8419EB22998F7A00E2C2C8 /* Model */,
 				BD4A713C229568A300DC0541 /* ViewControllers */,
 				BD8419E2229870C800E2C2C8 /* Service */,
@@ -328,6 +350,11 @@
 				TargetAttributes = {
 					BD4A70FD229557FE00DC0541 = {
 						CreatedOnToolsVersion = 10.2.1;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 					BD4A71142295580100DC0541 = {
 						CreatedOnToolsVersion = 10.2.1;
@@ -365,6 +392,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BD4A710F2295580000DC0541 /* LaunchScreen.storyboard in Resources */,
+				BD49EC30229B177D0086249A /* getSchwifty.mp3 in Resources */,
 				BD4A710C2295580000DC0541 /* Assets.xcassets in Resources */,
 				BD4A7107229557FE00DC0541 /* Main.storyboard in Resources */,
 				BD8419E922998CFC00E2C2C8 /* CharacterTableViewCell.xib in Resources */,
@@ -441,12 +469,14 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-RickAndMortyExample/Pods-RickAndMortyExample-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -492,6 +522,7 @@
 				BD4A710A229557FE00DC0541 /* RickAndMortyExample.xcdatamodeld in Sources */,
 				BD8419F4229999D300E2C2C8 /* CharacterInfo.swift in Sources */,
 				BD8419E1229870B600E2C2C8 /* CharacterService.swift in Sources */,
+				BD49EC2D229B164F0086249A /* AudioManager.swift in Sources */,
 				BD8419EE2299900E00E2C2C8 /* Origin.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

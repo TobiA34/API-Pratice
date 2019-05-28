@@ -32,14 +32,25 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3wS-73-E4x">
+                        <rect key="frame" x="141" y="85" width="25" height="25"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="25" id="0Az-n2-ecY"/>
+                            <constraint firstAttribute="height" constant="25" id="Me7-Al-Wwy"/>
+                        </constraints>
+                        <state key="normal" title=" " image="information-button"/>
+                    </button>
                 </subviews>
                 <constraints>
+                    <constraint firstItem="3wS-73-E4x" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="85" id="D9w-dQ-hoY"/>
                     <constraint firstAttribute="trailing" secondItem="FOe-Rd-MLW" secondAttribute="trailing" constant="15" id="LoB-ik-icl"/>
                     <constraint firstItem="FOe-Rd-MLW" firstAttribute="top" secondItem="MXS-3T-WeE" secondAttribute="top" id="M0j-Sz-6O5"/>
+                    <constraint firstAttribute="bottom" secondItem="3wS-73-E4x" secondAttribute="bottom" constant="21.5" id="MbD-Mt-1bZ"/>
                     <constraint firstItem="FOe-Rd-MLW" firstAttribute="leading" secondItem="MXS-3T-WeE" secondAttribute="trailing" constant="15" id="NMG-yI-fdR"/>
                     <constraint firstItem="MXS-3T-WeE" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="UH8-Hl-XS8"/>
                     <constraint firstItem="MXS-3T-WeE" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="X9v-uw-4PT"/>
                     <constraint firstItem="FOe-Rd-MLW" firstAttribute="bottom" secondItem="MXS-3T-WeE" secondAttribute="bottom" id="ZZP-FE-xpF"/>
+                    <constraint firstItem="3wS-73-E4x" firstAttribute="leading" secondItem="MXS-3T-WeE" secondAttribute="trailing" constant="26" id="Zz0-Hj-twJ"/>
                     <constraint firstAttribute="bottom" secondItem="MXS-3T-WeE" secondAttribute="bottom" constant="15" id="wm5-UP-QdB"/>
                 </constraints>
             </tableViewCellContentView>
@@ -51,4 +62,7 @@
             <point key="canvasLocation" x="244.92753623188409" y="120.87053571428571"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="information-button" width="64" height="64"/>
+    </resources>
 </document>

@@ -8,16 +8,27 @@
 
 import UIKit
 
+
 class CharactersViewController: UIViewController {
     
     @IBOutlet private weak var tableView: UITableView!
     
     private let characterService = CharacterService()
+    private let audioManager = AudioManager()
     private var datasource: Array<Character> = [] {
         didSet{
             tableView.reloadData()
         }
     }
+    
+    @IBAction func playBtnDidTouch(_ sender: Any) {
+        audioManager.playMusic(fileName: "getSchwifty")
+    }
+    
+    @IBAction func stopBtnDidTouch(_ sender: Any) {
+        audioManager.stopMusic(fileName: "getSchwifty")
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -63,6 +74,7 @@ private extension CharactersViewController {
             }
         }
     }
+    
     
     
     

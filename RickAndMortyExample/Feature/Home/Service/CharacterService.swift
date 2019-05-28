@@ -7,10 +7,12 @@
 //
 
 import Foundation
+import Alamofire
+
 
 class CharacterService {
     
-    func getCharacters(completion: @escaping (Result<Array<Character>, Error>) -> ()) {
+    func getCharacters(completion: @escaping (Swift.Result<Array<Character>, Error>) -> ()) {
         
         let urlString = "https://rickandmortyapi.com/api/character"
         guard let url = URL(string: urlString) else { return }
